@@ -14,4 +14,5 @@ import axios from 'axios';
 const getDogs = () => axios.get('https://random-dogs-api.herokuapp.com/dogs/15');
 
 // eslint-disable-next-line import/prefer-default-export
+// eslint-disable-next-line linebreak-style
 export { getDogs };

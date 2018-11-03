@@ -1,18 +1,11 @@
 import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
+import dogPhoto from './img/dog.jpg';
 
 import { getDogs } from './dogGetter';
 
-getDogs()
-  .then((data) => {
-    createDogCards(data.data.dogs);
-  })
-  .catch((error) => {
-    console.log({ error });
-  });
-
-$('#dogs').show();
+$('#dogPhoto').attr('src', dogPhoto);
 
 const createDogCards = (dogs) => {
   let newString = '';
@@ -28,6 +21,16 @@ const createDogCards = (dogs) => {
         </div>
         <img src="${dog.gif}" alt="" class="card-media" />
       </div>`;
-  })
+  });
   $('#dogs').html(newString);
 };
+
+getDogs()
+  .then((data) => {
+    createDogCards(data.data.dogs);
+  })
+  .catch((error) => {
+    console.log({ error });
+  });
+
+$('#dogs').show();
