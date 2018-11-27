@@ -3,7 +3,7 @@ import 'bootstrap';
 import './index.scss';
 import dogPhoto from './img/dog.jpg';
 
-import { getDogs } from './dogGetter';
+import getDogs from './dogGetter';
 
 $('#dogPhoto').attr('src', dogPhoto);
 
