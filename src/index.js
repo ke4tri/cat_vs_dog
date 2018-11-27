@@ -22,7 +22,7 @@ const createDogCards = (dogs) => {
         <img src="${dog.gif}" alt="" class="card-media" />
       </div>`;
   });
-  $('#dogs').html(newString);
+  $('#dogs2').html(newString);
 };
 
 getDogs()
